@@ -1,0 +1,65 @@
+--- main menu
+S> Do you want to know the temperature or know the weather?
+
+--- asking temp
+U> what is the temperature
+S> Which city?
+U> Sydney
+S> Which country?
+U> Australia
+S> The temperature is *
+
+--- weather1
+U> what is the weather today
+S> Which city?
+U> London
+S> Which country?
+U> UK
+S> Today will be a *
+
+--- weather2
+U> what is the weather today
+S> Which city?
+U> Sydney
+S> Which country?
+U> Australia
+S> Today will be a *
+
+--- weather3
+U> what is the weather today in kelvin
+S> Which city?
+U> Sydney
+S> Which country?
+U> Australia
+S> The temperature is * degrees.
+
+--- big one shot
+U> what is the weather today in london uk in kelvin
+S> The temperature is * degrees.
+
+--- a
+S> Do you want to know the temperature or know the weather?
+U> what is the weather todey in kelvin
+S> Which city?
+U> Sydny
+S> Country?
+U> Australia
+S> The temperature is * degrees.
+
+--- b
+S> Do you want to know the temperature or know the weather?
+U> please tell me the temperature
+S> Which city?
+U> Beijing
+S> Country?
+U> China
+S> The temperature is * degrees.
+
+--- b
+S> Do you want to know the temperature or know the weather?
+U> would you please tell me what the weather is like
+S> Which city?
+U> London
+S> Country?
+U> UK
+S> Today will be a *

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<grammar>
+
+  <action name="top">
+    <one-of>
+      <item>main menu</item>
+      <item>top</item>
+      <item>beginning</item>
+      <item>cancel</item>
+      <item>forget it</item>
+      <item>never mind</item>
+      <item>abort</item>
+    </one-of>
+  </action>
+
+  <action name="up">
+    <one-of>
+      <item>up</item>
+      <item>back</item>
+      <item>go back</item>
+    </one-of>
+  </action>
+
+  <question speaker="user" predicate="current_temp" type="wh_question">
+    <one-of>
+      <item>temperature</item>
+      <item>what is the temperature</item>
+      <item>how hot is it</item>
+      <item>how cold is it</item>
+      <item>what is the temperature in <slot predicate="unit_pred"/></item>
+      <item>how hot is it in <slot predicate="unit_pred"/></item>
+      <item>how cold is it in <slot predicate="unit_pred"/></item>
+      <item>what is the weather today in <slot predicate="unit_pred"/></item>
+      <item>what is the temperature in <slot predicate="city_pred"/> <slot predicate="country_pred"/></item>
+      <item>how hot is it in <slot predicate="city_pred"/> <slot predicate="country_pred"/></item>
+      <item>how cold is it in <slot predicate="city_pred"/> <slot predicate="country_pred"/></item>
+      <item>what is the temperature in <slot predicate="city_pred"/> <slot predicate="country_pred"/> in <slot predicate="unit_pred"/></item>
+      <item>how hot is it in <slot predicate="city_pred"/> <slot predicate="country_pred"/> in <slot predicate="unit_pred"/></item>
+      <item>how cold is it in <slot predicate="city_pred"/> <slot predicate="country_pred"/> in <slot predicate="unit_pred"/></item>
+      <item>what is the weather today in <slot predicate="city_pred"/><slot predicate="country_pred"/> in <slot predicate="unit_pred"/></item>
+    </one-of>
+  </question>
+
+
+  <question speaker="user" predicate="current_weather" type="wh_question">
+    <one-of>
+      <item>weather</item>
+      <item>what is the weather</item>
+      <item>what is the weather today</item>
+      <item>what is the weather like</item>
+      <item>weather</item>
+      <item>is it raining</item>
+      <item>is it sunny</item>
+      <item>how is it</item>
+      <item>how is it today</item>
+      <item>will it rain</item>
+      <item>will it rain today</item>
+      <item>will it be sunny</item>
+      <item>is it sunny</item>
+      <item>is it good weather</item>
+      <item>is it okay outside</item>
+      <item>is it good to go out</item>
+    </one-of>
+  </question>
+
+  <question speaker="system" predicate="city_pred" type="wh_question">
+    which city
+  </question>
+
+  <question speaker="system" predicate="country_pred" type="wh_question">
+    which country
+  </question>
+
+  <question speaker="all" predicate="current_temp">
+    the temperature
+  </question>
+
+  <question speaker="all" predicate="current_weather">
+    the weather
+  </question>
+
+  <question speaker="all" predicate="unit_pred">
+    the unit
+  </question>
+
+  <answer speaker="system" predicate="current_temp">
+    The temperature is <slot predicate="current_temp"/> degrees
+  </answer>
+
+  <answer speaker="system" predicate="current_weather">
+    Today will be a <slot predicate="current_weather"/>
+  </answer>
+
+  <individual name="city_london">london</individual>
+
+  <individual name="city_sydney">sydney</individual>
+
+  <individual name="city_gothenburg">gothenburg</individual>
+
+  <individual name="city_vancouver">vancouver</individual>
+
+  <individual name="city_beijing">beijing</individual>
+
+  <individual name="country_uk">
+    <one-of>
+      <item>the UK</item>
+      <item>england</item>
+      <item>united kingdom</item>
+      <item>the united kingdom</item>
+      <item>UK</item>
+    </one-of>
+  </individual>
+
+  <individual name="country_australia">
+    <one-of>
+      <item>Australia</item>
+    </one-of>
+  </individual>
+
+  <individual name="country_sweden">
+    <one-of>
+      <item>Sverige</item>
+      <item>Sweden</item>
+    </one-of>
+  </individual>
+  
+  <individual name="country_canada">
+    <one-of>
+      <item>Canada</item>
+    </one-of>
+  </individual>
+
+  <individual name="country_china">
+    <one-of>
+      <item>China</item>
+    </one-of>
+  </individual>
+
+  <individual name="mentally_disabled_units">
+    <one-of>
+      <item>fahrenheit</item>
+      <item>degrees fahrenheit</item>
+      <item>imperial</item>
+    </one-of>
+  </individual>
+
+  
+  <individual name="sciencey_units">
+    <one-of>
+      <item>kelvin</item>
+      <item>degrees kelvin</item>
+      <item>standard</item>
+    </one-of>
+  </individual>
+
+  <individual name="normal_units">
+    <one-of>
+      <item>centigrade</item>
+      <item>degrees celsius</item>
+      <item>degrees centigrade</item>
+      <item>celsius</item>
+      <item>metric</item>
+    </one-of>
+  </individual>
+
+</grammar>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<service_interface>
+    <query name="current_temp">
+        <parameters>
+            <parameter predicate="city_pred" format="grammar_entry"/>
+            <parameter predicate="country_pred" format="grammar_entry"/>
+            <parameter predicate="unit_pred" format="grammar_entry" optional="true"/>
+        </parameters>
+
+        <target>
+            <http endpoint="http://http-service/get_temp"/>
+        </target>
+    </query>
+
+     <query name="current_weather">
+        <parameters>
+            <parameter predicate="city_pred" format="grammar_entry"/>
+            <parameter predicate="country_pred" format="grammar_entry"/>
+        </parameters>
+
+        <target>
+            <http endpoint="http://http-service/get_weather"/>
+        </target>
+    </query>
+</service_interface>
+

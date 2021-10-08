@@ -2,15 +2,7 @@
 <grammar>
 
   <action name="top">
-    <one-of>
-      <item>main menu</item>
-      <item>top</item>
-      <item>beginning</item>
-      <item>cancel</item>
-      <item>forget it</item>
-      <item>never mind</item>
-      <item>abort</item>
-    </one-of>
+    Do you want to know about the temperature or the current weather?
   </action>
 
   <action name="up">

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<domain name="WeatherDomain" is_super_domain="true">
+
+<goal type="perform" action="top">
+    <plan>
+      <forget_all/>
+      <findout type="alt_question">
+        <alt>
+          <resolve type="wh_question" predicate="current_temp"/>
+        </alt>
+        <alt>
+          <resolve type="wh_question" predicate="current_weather"/>
+        </alt>
+      </findout>
+    </plan>
+  </goal>
+
+  <goal type="resolve" question_type="wh_question" predicate="current_temp">
+    <plan>
+      <findout type="wh_question" predicate="city_pred"/>
+      <findout type="wh_question" predicate="country_pred"/>
+      <bind type="wh_question" predicate="unit_pred"/>
+      <invoke_service_query predicate="current_temp" type="wh_question"/>
+      <forget predicate="country_pred"/>
+      <forget predicate="city_pred"/>
+    </plan>
+  </goal>
+  
+  <goal type="resolve" question_type="wh_question" predicate="current_weather">
+    <plan>
+      <findout type="wh_question" predicate="city_pred"/>
+      <findout type="wh_question" predicate="country_pred"/>
+      <invoke_service_query predicate="current_weather" type="wh_question"/>
+      <forget predicate="country_pred"/>
+      <forget predicate="city_pred"/>
+    </plan>
+  </goal>
+
+</domain>

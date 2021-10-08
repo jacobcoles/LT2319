@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ontology name="WeatherOntology">
+
+
+
+    <sort name="city" dynamic="true"/>
+    <sort name="country" dynamic="true"/>
+    <sort name="unit" dynamic="true"/>
+
+    <predicate name="city_pred" sort="city"/>
+    <predicate name="country_pred" sort="country"/>
+    <predicate name="unit_pred" sort="unit"/>
+    <predicate name="current_temp" sort="string"/>
+    <predicate name="current_weather" sort="string"/>
+
+    <individual name="city_london" sort="city"/>
+    <individual name="city_sydney" sort="city"/>
+    <individual name="country_uk" sort="country"/>
+    <individual name="country_australia" sort="country"/>
+
+    <individual name="mentally_disabled_units" sort="unit"/>
+    <individual name="sciencey_units" sort="unit"/>
+    <individual name="normal_units" sort="unit"/>
+
+
+</ontology>
